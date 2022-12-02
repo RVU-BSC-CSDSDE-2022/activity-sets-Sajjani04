@@ -12,6 +12,19 @@ int main()
 }
 int input()
 {
-  printf("enter the two numbers:");
-  scanf("%d%d",&a&b);
+  printf("enter the number:");
+  scanf("%d",&a);
+  printf("enter the number:");
+  scanf("%d",&b)
+  
+  return 0;
+}
+void add(int a, int b, int *sum)
+{
+  *sum=a+b;
+  
+}
+void output(int a, int b, int sum)
+{
+  printf("the sum of %d and %d is %d",a,b,sum);
 }

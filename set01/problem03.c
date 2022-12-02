@@ -7,20 +7,21 @@ int main()
   int a,b,sum;
   a =input();
   b= input();
-  add(a,b,sum);
+  sum=add(a,b);
   output(a,b,sum);
   return 0;
   
 }
 int input()
 {
-  printf("enter the 2 numbers:");
-  scanf("%d%d",&a,&b);
-}
-int add(int a,int b)
+  int n;
+  printf("enter the number:");
+  scanf("%d",&n);
+  return n;
+  }
+int add(int a, int b)
 {
-  int sum;
-  sum=a+b;
+  int sum=a+b;
   return sum;
 }
 void output(int a, int b, int sum)

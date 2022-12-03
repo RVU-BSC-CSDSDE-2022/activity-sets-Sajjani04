@@ -8,35 +8,35 @@ int main()
   a=input();
   b=input();
   c=input();
-  
+  compare(a,b,c,&largest);
+  output( a,  b,  c,  largest);
 }
 int input()
 {
-  printf("enter the two numbers:");
-  scanf("%d%d",&a&b)
+  int n;
+  printf("enter the numbers:");
+  scanf("%d",&n);
+  return n;
 
 }
 void compare(int a, int b, int c, int *largest)
 {
+  *largest=0;
+  if ((a>b)&&(a>c))
   {
-  if(a>b)
-  {
-    printf("%d is the largest\n:",a);
+    *largest=a;
   }
-  else if(b>c)
+  else if ((b>a)&&(b>c))
   {
-    printf("%d is the largest\n:",b);
-    }
-  else if(c>a)
-  {
-    printf("%d is the largest\n",c);
+    *largest=b;
   }
   else
   {
-    printf("all are equal");
+    *largest=c;
+  }
+    
   }
     void output(int a, int b, int c, int largest)
     {
-    printf("%d is largest than %d and %d",a,b,c,largest)
+    printf("the largest of %d,%d and %d is %d",a,b,c,largest);
     }
-}
